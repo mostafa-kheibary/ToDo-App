@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -7,9 +8,21 @@
 body{
     font-family: sans-serif;
 }
+
+
+/* start styling page one */
+.container .head{
+    display: flex;
+    place-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+.container .head img{
+    width: 50px;
+    height: 100%;
+}
 .container .head h2{
     font-size: 35px;
-    margin: 20px;
 }
 .container .feed{
     font-size: 20px;
@@ -32,9 +45,18 @@ body{
     border-radius: 6px;
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.192);
 }
+.container .list ul li h4{
+    margin-bottom: 5px;
+}
+.container .list ul li p{
+    font-size: 15px;
+}
 .container .list ul li i{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    place-items: center;
     width: 30px;
+    height: 30px;
     color: red;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.192);
@@ -57,6 +79,7 @@ body{
     cursor: pointer;
     z-index: 10;
 }
+/* end of page one style */
 
 
 /* start container 2 (add new todo page)*/
@@ -128,3 +151,4 @@ body{
 .show-cont2{
     right: 0px;
 }
+/* end of container 2 (add new todo page)*/
