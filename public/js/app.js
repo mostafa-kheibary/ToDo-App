@@ -19,12 +19,13 @@ Close.addEventListener("click", function () {
 });
 
 // prevent to reload page when form submit
-form.addEventListener("submit",function(e){
-e.preventDefault();
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
 });
 
 // click event for button
 Submit.addEventListener("click", function () {
+
     Container2.classList.remove("show-cont2")
     if (Topic.value != `` | ExContent.value != ``) {
         Menu.innerHTML += `<li><div><h4>${Topic.value}</h4><p>${ExContent.value}<p></div><div><i class="fas fa-times closeli"></i></div></li>`;
