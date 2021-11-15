@@ -155,3 +155,12 @@ body{
     right: 0px;
 }
 /* end of container 2 (add new todo page)*/
+
+
+
+@media only screen and (min-width: 800px){
+    
+    body{
+        margin: 0 20% 0 20%;
+    }
+}
