@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+body{
+    font-family: sans-serif;
+}
+.container .head h2{
+    font-size: 35px;
+    margin: 20px;
+}
+.container .feed{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 25px 0 25px 30px;
+}
+.container hr{
+    width: 80%;
+    height: 8px;
+    background-color: #EEEEEE;
+    margin: auto;
+    border: none;
+}
+.container .list ul li{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 25px;
+    margin: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.192);
+}
+.container .list ul li i{
+    text-align: center;
+    width: 30px;
+    color: red;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.192);
+    padding: 8px;  
+    border-radius: 50%;
+    cursor: pointer;
+}
+.add-bott{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    background-color: #664EFF;
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+/* start container 2 (add new todo page)*/
+
+.container-2{
+    top: 0;
+    right:-100%;
+    width: 100%;
+    height: 100%;
+    background-color:white;
+    position: fixed;
+    transition: all 300ms ease-in-out;
+    z-index: 11;
+}
+.container-2 h2{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 25px 25px 50px 40px;
+}
+.container-2 div{
+    text-align: center;
+}
+.container-2 input{
+    display: block;
+    margin: auto;
+    padding: 15px;
+    width: 400px;
+    border: none;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+    transition: all 200ms;
+}
+.container-2 input:focus{
+    background-color: rgb(238, 238, 238);
+    outline: none;
+    border: none;
+}
+.container-2 input:nth-child(2){
+    margin-top: 25px;
+}
+.container-2 button{
+    margin-top: 25px;
+    background-color: #664EFF;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 200ms ;
+}
+.container-2 button:hover{
+    background-color: #4935ca;
+}
+.container-2 .close{
+    display: flex;
+    justify-content: right;
+}
+.container-2 .close i{
+    padding: 25px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 150ms;
+}
+.container-2 .close i:hover{
+    color: red;
+}
+.show-cont2{
+    right: 0px;
+}
