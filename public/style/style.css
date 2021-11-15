@@ -4,9 +4,10 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family:'Roboto', sans-serif;;
 }
 body{
-    font-family: sans-serif;
+    
 }
 
 
@@ -47,9 +48,11 @@ body{
 }
 .container .list ul li h4{
     margin-bottom: 5px;
+    font-weight: 500;
 }
 .container .list ul li p{
     font-size: 15px;
+    font-weight: 300;
 }
 .container .list ul li i{
     display: flex;
