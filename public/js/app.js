@@ -36,7 +36,11 @@ Submit.addEventListener("click", function () {
     for (const li of lis) {
         li.addEventListener("click", function (e) {
             if (e.target.tagName == "I") {
-                li.remove();
+                li.classList.add("li-detroy");
+                setTimeout(function(){
+                    li.remove();
+                    li.classList.remove("li-detroy");
+                },1000);
             }
         });
     }
