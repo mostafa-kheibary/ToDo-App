@@ -20,6 +20,7 @@
 }
 .container .head h2{
     font-size: 35px;
+    
 }
 .container .feed{
     font-size: 20px;
@@ -33,21 +34,21 @@
     margin: auto;
     border: none;
 }
-
 .container .list ul li{
     display: flex;
     justify-content: space-between;
     place-items: center;
     padding: 25px;
     margin: 30px;
+    height: 80px;
     border-radius: 6px;
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.192);
-    transition: all 800ms ease;
-    animation-play-state: paused;
+    transition: all 1000ms ease;
 }
 .li-detroy{
     transform: translateX(-150%) !important;
     opacity: 0;
+    
 }
 
 .container .list ul li:hover{

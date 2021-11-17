@@ -37,6 +37,7 @@ Submit.addEventListener("click", function () {
         li.addEventListener("click", function (e) {
             if (e.target.tagName == "I") {
                 li.classList.add("li-detroy");
+                li.style = 'height: 0px;margin: 0px;padding:0px;'
                 setTimeout(function(){
                     li.remove();
                     li.classList.remove("li-detroy");
