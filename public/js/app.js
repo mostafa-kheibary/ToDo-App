@@ -1,14 +1,14 @@
 // our constant
 const AddBot = document.querySelector(".add-bott");
 const Container2 = document.querySelector(".container-2");
-const Close = document.querySelector(".close");
+const Close = document.querySelector(".close i");
 const Submit = document.getElementById("submit");
 const Menu = document.querySelector(".menu");
 const Topic = document.getElementById("topic");
 const ExContent = document.getElementById("content");
 const CloseLi = document.querySelector(".closeli");
 const form = document.querySelector("form")
-
+const body = document.querySelector('html');
 
 // page Navigation 
 AddBot.addEventListener("click", () => {
@@ -26,7 +26,7 @@ form.addEventListener("submit", function (e) {
 // click event for button
 Submit.addEventListener("click", function () {
 
-    Container2.classList.remove("show-cont2")
+    Container2.classList.remove("show-cont2");
     if (Topic.value != `` | ExContent.value != ``) {
         Menu.innerHTML += `<li><div><h4>${Topic.value}</h4><p>${ExContent.value}<p></div><div><i class="fas fa-times closeli"></i></div></li>`;
         Topic.value = "";
@@ -48,4 +48,7 @@ Submit.addEventListener("click", function () {
 
 });
 
+body.addEventListener('dblclick',function(){
+   Container2.classList.toggle("show-cont2");
+});
 
