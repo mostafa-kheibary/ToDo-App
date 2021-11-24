@@ -9,7 +9,6 @@ const ExContent = document.getElementById("content");
 const CloseLi = document.querySelector(".closeli");
 const form = document.querySelector("form")
 const body = document.querySelector('html');
-
 // page Navigation 
 AddBot.addEventListener("click", () => {
     Container2.classList.add("show-cont2")
@@ -27,8 +26,13 @@ form.addEventListener("submit", function (e) {
 Submit.addEventListener("click", function () {
 
     Container2.classList.remove("show-cont2");
+
     if (Topic.value != `` | ExContent.value != ``) {
         Menu.innerHTML += `<li><div><h4>${Topic.value}</h4><p>${ExContent.value}<p></div><div><i class="fas fa-times closeli"></i></div></li>`;
+        // TODOS array
+        Todos.push(Topic.value);
+        console.log(Todos);
+        // clean the input value
         Topic.value = "";
         ExContent.value = "";
     }
@@ -36,19 +40,23 @@ Submit.addEventListener("click", function () {
     for (const li of lis) {
         li.addEventListener("click", function (e) {
             if (e.target.tagName == "I") {
+                //  delete the li animataion
                 li.classList.add("li-detroy");
                 li.style = 'height: 0px;margin: 0px;padding:0px;'
-                setTimeout(function(){
+                setTimeout(function () {
                     li.remove();
                     li.classList.remove("li-detroy");
-                },1000);
+                }, 1000);
             }
         });
     }
 
-});
 
-body.addEventListener('dblclick',function(){
-   Container2.classList.toggle("show-cont2");
+
+
+});
+// shorthand for adding todos
+body.addEventListener('dblclick', function () {
+    Container2.classList.toggle("show-cont2");
 });
 
