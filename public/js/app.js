@@ -9,6 +9,7 @@ const ExContent = document.getElementById("content");
 const CloseLi = document.querySelector(".closeli");
 const form = document.querySelector("form")
 const body = document.querySelector('html');
+const Todos = [];
 // page Navigation 
 AddBot.addEventListener("click", () => {
     Container2.classList.add("show-cont2")
