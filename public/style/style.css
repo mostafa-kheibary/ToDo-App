@@ -1,4 +1,9 @@
-
+:root{
+    --red:#FF4A4A;
+    --blue :#23F2FF;
+    --yellow:#FAFF00;
+    --green : #84FF23;
+}
 *{
     margin: 0;
     padding: 0;
@@ -121,6 +126,7 @@
     cursor: pointer;
     z-index: 10;
 }
+
 /* end of page one style */
 
 
@@ -192,6 +198,45 @@
 }
 .show-cont2{
     right: 0px;
+}
+.color{
+    display: flex;
+    justify-content: center ;
+    margin-left: -135px;
+    margin-top: 30px;
+}
+.color h4{
+    font-weight: 400;
+}
+.color .c-group{
+    display: flex;
+    margin-left: 15px;
+    gap: 15px;
+}
+.color .c-group div{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+}
+.color .c-group div:hover{
+    transform: scale(1.1);
+}
+.white{
+    background-color: violet;
+}
+.blue{
+    background-color: var(--blue);
+}
+.yellow{
+    background-color: var(--yellow);
+}
+.green{
+    background-color: var(--green);
+}
+.red{
+    background-color: var(--red);
 }
 /* end of container 2 (add new todo page)*/
 
