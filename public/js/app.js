@@ -1,11 +1,11 @@
 // our var
+const search = document.getElementById("search");
 const AddBot = document.querySelector(".add-bott");
 const Container2 = document.querySelector(".container-2");
 const Close = document.querySelector(".close i");
 const Submit = document.getElementById("submit");
 const Menu = document.querySelector(".menu");
 const Topic = document.getElementById("topic");
-const ExContent = document.getElementById("content");
 const CloseLi = document.querySelector(".closeli");
 const form = document.querySelector("form")
 const body = document.querySelector('html');
@@ -29,13 +29,13 @@ form.addEventListener("submit", function (e) {
 Submit.addEventListener("click", function () {
 
     Container2.classList.remove("show-cont2");
-    if (Topic.value.trim() != `` | ExContent.value.trim() != ``) {
+    if (Topic.value.trim() != ``) {
         // TODOS array
         Todos.push(Topic.value);
         let html = '';
         // for get all item from todos arrey
         for (const todo of Todos) {
-            html += `<li><div><h4>${todo}</h4><p>${ExContent.value}<p></div><div><i class="fas fa-times closeli"></i></div></li>`;
+            html += `<li><div><h4>${todo}</h4></div><div><i class="fas fa-times closeli"></i></div></li>`;
         }
         console.log(Todos);
         Menu.innerHTML = html;
@@ -43,7 +43,6 @@ Submit.addEventListener("click", function () {
 
     }
     Topic.value = '';
-    ExContent.value = '';
 
     // deliting li part
     const lis = Menu.children;
@@ -70,4 +69,16 @@ Submit.addEventListener("click", function () {
 body.addEventListener('dblclick', function () {
     Container2.classList.toggle("show-cont2");
 });
-
+// search option
+const lis = Menu.children;
+search.addEventListener("keyup",function(){
+    const searchVall = search.value
+    for(const li of lis){
+        if(li.innerText.includes(searchVall)){
+            li.style.display = "flex";
+        }
+        else{
+            li.style.display= "none";
+        }
+    }
+});

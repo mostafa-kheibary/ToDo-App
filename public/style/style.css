@@ -25,7 +25,38 @@
 .container .feed{
     font-size: 20px;
     font-weight: 300;
-    margin: 25px 0 25px 30px;
+    margin: 25px 50px 25px 50px;
+}
+.search{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 50px 0 50px;
+}
+.search input{
+    width: 100%;
+    padding: 15px;
+    height: 50px;
+    border-radius:50px;
+    border: none;
+    background-color: rgb(243, 243, 243);
+}
+.search input:focus{
+    outline: none;
+}
+.search button{
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    padding: 5px;
+    border-radius: 50%;
+    pointer-events: none;
 }
 .container hr{
     width: 80%;
