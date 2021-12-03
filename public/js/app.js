@@ -35,7 +35,7 @@ Submit.addEventListener("click", function () {
         let html = '';
         // for get all item from todos arrey
         for (const todo of Todos) {
-            html += `<li><div><h4>${todo}</h4></div><div><i class="fas fa-times closeli"></i></div></li>`;
+            html += `<li><div><h4>${todo}</h4></div><div class= "split"><i class="fas fa-times closeli"></i><i class="fas fa-check tik"></i></div></li>`;
         }
         console.log(Todos);
         Menu.innerHTML = html;
@@ -62,17 +62,15 @@ Submit.addEventListener("click", function () {
                     li.classList.remove("li-detroy");
                 }, 700);
             }
+            
         });
     }
 });
-// shorthand for adding todos
-body.addEventListener('dblclick', function () {
-    Container2.classList.toggle("show-cont2");
-});
+
 // search option
 const lis = Menu.children;
 search.addEventListener("keyup",function(){
-    const searchVall = search.value
+    const searchVall = search.value.trim();
     for(const li of lis){
         if(li.innerText.includes(searchVall)){
             li.style.display = "flex";

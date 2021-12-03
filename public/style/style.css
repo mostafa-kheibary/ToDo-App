@@ -27,7 +27,22 @@
     font-size: 35px;
     
 }
-.container .feed{
+.feed{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    margin-right: 50px;
+}
+select{
+    height: 30px;
+    border:  1px solid #664EFF;
+    color: #664EFF;
+    border-radius: 5px;
+}
+select:focus{
+    outline: none;
+}
+.container .feed h4{
     font-size: 20px;
     font-weight: 300;
     margin: 25px 50px 25px 50px;
@@ -51,7 +66,7 @@
     outline: none;
 }
 .search button{
-    background-color: blueviolet;
+    background-color: #664EFF;
     color: white;
     border: none;
     width: 35px;
@@ -199,45 +214,27 @@
 .show-cont2{
     right: 0px;
 }
-.color{
+.split{
     display: flex;
-    justify-content: center ;
-    margin-left: -135px;
-    margin-top: 30px;
-}
-.color h4{
-    font-weight: 400;
-}
-.color .c-group{
-    display: flex;
-    margin-left: 15px;
+    justify-content: center;
     gap: 15px;
+    flex-direction: row-reverse;
 }
-.color .c-group div{
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    transition: all 200ms ease-in;
+.split i{
+    transition: all 100ms ease-in;
 }
-.color .c-group div:hover{
-    transform: scale(1.1);
+.split i:nth-child(2){
+    color: var(--green) !important;
 }
-.white{
-    background-color: violet;
-}
-.blue{
-    background-color: var(--blue);
-}
-.yellow{
-    background-color: var(--yellow);
-}
-.green{
-    background-color: var(--green);
-}
-.red{
+.split i:nth-child(1):hover{
+    color:  white !important;
     background-color: var(--red);
 }
+.split i:nth-child(2):hover{
+    color:  white !important;
+    background-color: var(--green);
+}
+
 /* end of container 2 (add new todo page)*/
 
 
