@@ -95,6 +95,11 @@ select:focus{
     border-radius: 6px;
     box-shadow: 0px 0px 32px -3px rgba(0, 0, 0, 0.192);
     transition: all 800ms ease;
+    transform: background-color 10ms ease !important;
+}
+.todo-done{
+    background-color: #3AB14D !important;
+    color: white !important;
 }
 .li-detroy{
     transform: translateX(-150%) !important;

@@ -26,7 +26,6 @@ Close.addEventListener("click", function () {
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 });
-
 // click event for submit button 
 Submit.addEventListener("click", function () {
     Container2.classList.remove("show-cont2");
@@ -36,7 +35,7 @@ Submit.addEventListener("click", function () {
         let html = '';
         // for get all item from todos arrey
         for (const todo of Todos) {
-            html += `<li><div><h4>${todo}</h4></div><div class= "split"><i class="fas fa-times closeli"></i><i class="fas fa-check done"></i></div></li>`;
+            html += `<li><div><h4>${todo}</h4></div><div class= "split"><i class="fas fa-times" id="closeli"></i><i class="fas fa-check" id="done"></i></div></li>`;
         }
         console.log(Todos);
         Menu.innerHTML = html;
@@ -52,7 +51,7 @@ Submit.addEventListener("click", function () {
     const lis = Menu.children;
     for (const li of lis) {
         li.addEventListener("click", function (e) {
-            if (e.target.tagName == "I") {
+            if (e.target.id == "closeli") {
                 // find index of li to remove it
                 const x = Todos.findIndex((n) => n == li.innerText);
                 // splice it from arrey and remove
@@ -66,13 +65,15 @@ Submit.addEventListener("click", function () {
                     li.classList.remove("li-detroy");
                 }, 700);
             }
-
+            if(e.target.id == "done"){
+                li.classList.toggle('todo-done');
+            }
         });
     }
 });
 // when start wrinthing toast will be disappre
-Topic.addEventListener('keydown',()=>ErrorMessage.classList.remove('toast-animation'));
-ErrorMessage.addEventListener('click',()=>ErrorMessage.classList.remove('toast-animation'));
+Topic.addEventListener('keydown', () => ErrorMessage.classList.remove('toast-animation'));
+ErrorMessage.addEventListener('click', () => ErrorMessage.classList.remove('toast-animation'));
 // search option
 const lis = Menu.children;
 search.addEventListener("keyup", function () {
