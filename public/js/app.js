@@ -9,6 +9,8 @@ const Topic = document.getElementById("topic");
 const CloseLi = document.querySelector(".closeli");
 const form = document.querySelector("form")
 const body = document.querySelector('html');
+const ErrorBox = document.querySelector('.error');
+const ErrorMessage = document.querySelector('.message');
 const Todos = [];
 let html = '';
 // page Navigation 
@@ -27,7 +29,6 @@ form.addEventListener("submit", function (e) {
 
 // click event for submit button 
 Submit.addEventListener("click", function () {
-
     Container2.classList.remove("show-cont2");
     if (Topic.value.trim() != ``) {
         // TODOS array
@@ -35,13 +36,16 @@ Submit.addEventListener("click", function () {
         let html = '';
         // for get all item from todos arrey
         for (const todo of Todos) {
-            html += `<li><div><h4>${todo}</h4></div><div class= "split"><i class="fas fa-times closeli"></i><i class="fas fa-check tik"></i></div></li>`;
+            html += `<li><div><h4>${todo}</h4></div><div class= "split"><i class="fas fa-times closeli"></i><i class="fas fa-check done"></i></div></li>`;
         }
         console.log(Todos);
         Menu.innerHTML = html;
-        // clean the input value
-
     }
+    else {
+        ErrorMessage.classList.add('toast-animation');
+        setTimeout(() => ErrorMessage.classList.remove('toast-animation'), 3000);
+    }
+    // clean the input value
     Topic.value = '';
 
     // deliting li part
@@ -62,21 +66,23 @@ Submit.addEventListener("click", function () {
                     li.classList.remove("li-detroy");
                 }, 700);
             }
-            
+
         });
     }
 });
-
+// when start wrinthing toast will be disappre
+Topic.addEventListener('keydown',()=>ErrorMessage.classList.remove('toast-animation'));
+ErrorMessage.addEventListener('click',()=>ErrorMessage.classList.remove('toast-animation'));
 // search option
 const lis = Menu.children;
-search.addEventListener("keyup",function(){
+search.addEventListener("keyup", function () {
     const searchVall = search.value.trim();
-    for(const li of lis){
-        if(li.innerText.includes(searchVall)){
+    for (const li of lis) {
+        if (li.innerText.includes(searchVall)) {
             li.style.display = "flex";
         }
-        else{
-            li.style.display= "none";
+        else {
+            li.style.display = "none";
         }
     }
 });

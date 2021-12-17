@@ -140,8 +140,11 @@ select:focus{
     color: white;
     cursor: pointer;
     z-index: 10;
+    transition: all 150ms ease-out;
 }
-
+.add-bott:hover{
+    transform: scale(1.2);
+}
 /* end of page one style */
 
 
@@ -237,7 +240,49 @@ select:focus{
 
 /* end of container 2 (add new todo page)*/
 
+.error{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 150;
+}
 
+.error .message{
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    width: 280px;
+    height: 60px;
+    padding: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.164);
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: all 1s ease;
+    transform: translateX(-300px);
+    cursor: pointer;
+}
+.error .message::after{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 60px;
+    background-color: red;
+    left: 0;
+}
+.toast-animation{
+    transform: translateX(0) !important;
+}
+.error .message h4{
+    font-size: 15px;
+    font-weight: 200;
+}
+.error .message  i{
+    color: red;
+    font-size: 20px;
+}
 
 @media only screen and (min-width: 800px){
     
