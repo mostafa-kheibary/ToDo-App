@@ -1,7 +1,5 @@
 :root{
-    --red:#FF4A4A;
-    --blue :#23F2FF;
-    --yellow:#FAFF00;
+    --red:#F53F53;
     --green : #84FF23;
 }
 *{
@@ -31,28 +29,56 @@
     display: flex;
     justify-content: space-between;
     place-items: center;
-    margin-right: 50px;
+    padding: 15px;
 }
-select{
-    height: 30px;
-    border:  1px solid #664EFF;
-    color: #664EFF;
+.sort-sec{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    place-content: center;
+
+    gap: 25px;
+}
+.list{
+    text-align: center;
+}
+.pre{
+    margin-top: 50px;
+}
+.pre img{
+    width: 300px
+}
+.pre h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+.remove-all{
+    padding: 8px;
+    width: 150px;
+    background-color: #F53F53;
+    color: white;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+    transform: scale(0);
 }
-select:focus{
-    outline: none;
+.show-remove-all{
+    transform: scale(1);
 }
 .container .feed h4{
     font-size: 20px;
     font-weight: 300;
-    margin: 25px 50px 25px 50px;
 }
 .search{
     position: relative;
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin: 0 50px 0 50px;
+    margin: 10px;
 }
 .search input{
     width: 100%;
@@ -66,7 +92,7 @@ select:focus{
     outline: none;
 }
 .search button{
-    background-color: #664EFF;
+    background-color: #F53F53;
     color: white;
     border: none;
     width: 35px;
@@ -78,9 +104,9 @@ select:focus{
     border-radius: 50%;
     pointer-events: none;
 }
-.container hr{
-    width: 80%;
-    height: 8px;
+.container .line{
+    width: 100%;
+    height: 5px;
     background-color: #EEEEEE;
     margin: auto;
     border: none;
@@ -101,10 +127,21 @@ select:focus{
     background-color: #3AB14D !important;
     color: white !important;
 }
-.li-detroy{
+.close-todo{
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
     transform: translateX(-150%) !important;
     opacity: 0;
-    
+}
+.close-all-todo{
+    transform: translateX(-150%) !important;
+    opacity: 0;
+}
+.done-todo{
+    text-decoration: line-through;
+    background-color: #f4f4f4;
+    opacity: .5;
 }
 
 .container .list ul li:hover{
@@ -131,14 +168,14 @@ select:focus{
     border-radius: 50%;
     cursor: pointer;
 }
-.add-bott{
+.add-botton{
     position: fixed;
     right: 30px;
     bottom: 30px;
     display: flex;
     justify-content: center;
     place-items: center;
-    background-color: #664EFF;
+    background-color: #F53F53;
     width: 50px;
     border-radius: 50%;
     height: 50px;
@@ -147,7 +184,7 @@ select:focus{
     z-index: 10;
     transition: all 150ms ease-out;
 }
-.add-bott:hover{
+.add-botton:hover{
     transform: scale(1.2);
 }
 /* end of page one style */
@@ -193,7 +230,7 @@ select:focus{
 }
 .container-2 button{
     margin-top: 25px;
-    background-color: #664EFF;
+    background-color: #F53F53;
     margin-top: 50px;
     width: 200px;
     height: 40px;
@@ -204,7 +241,7 @@ select:focus{
     transition: all 200ms ;
 }
 .container-2 button:hover{
-    background-color: #4935ca;
+    background-color: #B42D40;
 }
 .container-2 .close{
     display: flex;
@@ -230,6 +267,7 @@ select:focus{
 }
 .split i{
     transition: all 100ms ease-in;
+    text-decoration: none !important;
 }
 .split i:nth-child(2){
     color: var(--green) !important;
@@ -292,6 +330,6 @@ select:focus{
 @media only screen and (min-width: 800px){
     
     body{
-        margin: 0 20% 0 20%;
+        margin: 0 50px 0 50px;
     }
 }
